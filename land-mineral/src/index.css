@@ -1,0 +1,40 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Set the default background and font globally */
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+  
+  /* Smooth scrolling for the whole page */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* --- Premium Corporate Polish --- */
+
+/* 1. Custom Selection Color (The color when you highlight text) */
+::selection {
+  @apply bg-emerald-500/30 text-emerald-200;
+}
+
+/* 2. Custom Scrollbar (Chrome/Safari/Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full border border-slate-900;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-700;
+}
