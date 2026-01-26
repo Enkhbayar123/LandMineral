@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import BranchDetail from "./pages/BranchDetail"; // <--- Import the new component
 
-// Placeholder components to prevent crashes
+// Placeholder for Contact
 const Placeholder = ({ title }) => (
   <div className="min-h-screen flex items-center justify-center bg-slate-950 text-slate-400 text-2xl font-light">
     {title} - Coming Soon
@@ -21,13 +23,11 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            
-            {/* Global Pages */}
-            <Route path="/about" element={<Placeholder title="About Us" />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Placeholder title="Contact" />} />
             
-            {/* Dynamic Branch Routes */}
-            <Route path="/branches/:branchId" element={<Placeholder title="Branch Details" />} />
+            {/* UPDATED: Use the real BranchDetail component */}
+            <Route path="/branches/:branchId" element={<BranchDetail />} />
           </Routes>
         </main>
 

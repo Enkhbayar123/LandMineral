@@ -19,7 +19,7 @@
 
 /* 1. Custom Selection Color (The color when you highlight text) */
 ::selection {
-  @apply bg-emerald-500/30 text-emerald-200;
+  @apply bg-emerald-500/30 text-white; 
 }
 
 /* 2. Custom Scrollbar (Chrome/Safari/Edge) */

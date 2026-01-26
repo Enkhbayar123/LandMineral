@@ -7,15 +7,27 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // This sets 'Inter' as the default font for 'font-sans'
-        sans: ['Inter', 'sans-serif'], 
+        sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        // Custom branding colors if you want to use them specifically
+        // We override 'emerald' so you don't have to rewrite all your code.
+        emerald: {
+          50: '#FdFaEf',
+          100: '#Fbf6De',
+          200: '#F6EcbD',
+          300: '#F0E19b',
+          400: '#EbD77A',
+          500: '#D4AF37', // <--- Your Golden Yellow
+          600: '#Aa8C2c', // Darker gold for hover states
+          700: '#806921',
+          800: '#554616',
+          900: '#2b230b',
+          950: '#151105',
+        },
         brand: {
-          dark: '#0f172a',  // slate-900
-          main: '#059669',  // emerald-600
-          accent: '#f59e0b', // amber-500
+          dark: '#0f172a',
+          main: '#D4AF37', // Updated this too
+          accent: '#f59e0b',
         }
       }
     },
