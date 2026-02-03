@@ -4,7 +4,7 @@ import { Wheat, Milk, Building2, Mountain } from "lucide-react";
 export const BRANCH_COMPANIES = [
   {
     id: "agriculture",
-    name: "Tsetsen Dald Trade LLC",
+    name: "Tsetsen Dalt Trade LLC", // <--- Fixed Spelling
     description: "Meat production, trade, and export.",
     path: "/branches/agriculture",
     icon: Wheat,
@@ -17,7 +17,7 @@ export const BRANCH_COMPANIES = [
         "Experience: Exported meat products to China (2018–2020)"
       ],
       founder: "Information not currently available",
-      website: "#"
+      website: "/tsetsen-dalt" // <--- Updated URL to match spelling
     }
   },
   {
@@ -35,7 +35,7 @@ export const BRANCH_COMPANIES = [
           "Location: Ulaanbaatar & Baganuur District"
         ],
         founder: "Information not currently available",
-        website: "#"
+        website: "/lansyn-tsatsal"
     }
   },
   {
@@ -53,7 +53,7 @@ export const BRANCH_COMPANIES = [
           "Established: 2002"
         ],
         founder: "Information not currently available",
-        website: "#"
+        website: "/danista-od"
     }
   },
   {
@@ -71,7 +71,7 @@ export const BRANCH_COMPANIES = [
           "Partners: Collaboration with tourism companies"
         ],
         founder: "Information not currently available",
-        website: "#"
+        website: "/vajra-wisdom"
     }
   },
 ];

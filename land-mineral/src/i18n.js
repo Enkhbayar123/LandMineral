@@ -6,24 +6,12 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   en: {
     translation: {
-      nav: {
-        home: "Home",
-        branches: "Branch Companies",
-        about: "About Us",
-        contact: "Contact",
-      },
-      hero: {
-        title: "Diversified Growth in",
-        titleHighlight: "Mongolia's Key Sectors",
-        subtitle: "Mining • Agriculture • Trade • Services",
-        cta: "View Our Portfolio",
-      },
-      network: {
-        subtitle: "Group Structure",
-        title: "Four Pillars of Operations",
-        link: "View corporate structure",
-        learnMore: "Learn more"
-      },
+      // ============================================================
+      // 1. MAIN LAND MINERAL GROUP SITE
+      // ============================================================
+      nav: { home: "Home", branches: "Branch Companies", about: "About Us", contact: "Contact" },
+      hero: { title: "Diversified Growth in", titleHighlight: "Mongolia's Key Sectors", subtitle: "Mining • Agriculture • Trade • Services", cta: "View Our Portfolio" },
+      network: { subtitle: "Group Structure", title: "Four Pillars of Operations", link: "View corporate structure", learnMore: "Learn more" },
       story: {
         established: "ESTABLISHED 2011",
         title: "Sustainable Operations Across Economic Zones",
@@ -31,245 +19,207 @@ const resources = {
         areas: "Key Business Areas:",
         link: "Read our full story",
         experience: "Years of Excellence",
-        activityList: {
-            0: "Mining",
-            1: "Food & Agriculture",
-            2: "Meat Products",
-            3: "Dairy Products",
-            4: "Trade",
-            5: "Export",
-            6: "Services",
-            7: "Leasing",
-            8: "Manufacturing",
-            9: "Coffee Shop",
-            10: "Secured Lending"
-        }
+        activityList: { 0: "Mining", 1: "Food & Agriculture", 2: "Meat Products", 3: "Dairy Products", 4: "Trade", 5: "Export", 6: "Services", 7: "Leasing", 8: "Manufacturing", 9: "Coffee Shop", 10: "Secured Lending" }
       },
       about: {
-        header: {
-          profile: "Corporate Profile",
-          title: "Building Value Across",
-          titleHighlight: "Generations",
-          description: "Land Mineral Group LLC is a diversified conglomerate founded in 2011. We operate sustainably across four major pillars: Mining, Agriculture, Trade, and Services."
+         header: { profile: "Corporate Profile", title: "Building Value Across", titleHighlight: "Generations", description: "Land Mineral Group LLC is a diversified conglomerate founded in 2011." },
+         stats: { founded: "Founded", subsidiaries: "Subsidiaries", sectors: "Key Sectors", zones: "Economic Zones", central: "Central" },
+         journey: { title: "Our Journey", p1: "Established in 2011...", p2: "Today, our operations span...", focusTitle: "Strategic Focus Areas", focusList: { 0: "Responsible Mining", 1: "Food Security", 2: "Logistics", 3: "Leasing" }, quote: "Committed to diversifying Mongolia's economy." },
+         values: { title: "Our Core Values", subtitle: "Principles guiding our legacy.", items: { sustainability: { title: "Sustainability", desc: "Environmental stewardship." }, innovation: { title: "Innovation", desc: "Constant evolution." }, integrity: { title: "Integrity", desc: "Transparent governance." }, community: { title: "Community", desc: "Creating jobs." } } },
+         cta: { title: "Ready to Partner?", desc: "Contact us today.", button: "Contact Us" }
+      },
+      branchDetail: { overview: "Company Overview", highlights: "Key Highlights", founder: "Founder Information", glance: "At a Glance", established: "Established", headquarters: "Headquarters", website: "Visit Website", opensTab: "Opens in a new tab", hqLocation: "Ulaanbaatar, Mongolia" },
+      companies: {
+        mining: { name: "Mining & Industry", description: "Sustainable mining operations.", introduction: "Leading the way in responsible extraction.", founder: "Founder Info Not Available", features: { 0: "Sustainable extraction", 1: "Heavy machinery", 2: "Rehabilitation" } },
+        agriculture: { name: "Tsetsen Dalt Trade LLC", description: "Meat production, trade, and export.", introduction: "Specializing in meat and meat product production.", founder: "Information not currently available", features: { 0: "Factory facility: 3.5 hectares", 1: "Storage: 4 deep freezers", 2: "Experience: Exported to China" } },
+        dairy: { name: "Lansyn Tsatsal LLC", description: "Dairy products and farming.", introduction: "Premier dairy enterprise.", founder: "Information not currently available", features: { 0: "Sector: Milk & Dairy", 1: "Operations: Farming", 2: "Location: Ulaanbaatar" } },
+        danista: { name: "Danista-Od LLC", description: "Trade and service.", introduction: "Key player in trade.", founder: "Information not currently available", features: { 0: "Location: Erdenet", 1: "Activities: Trade", 2: "Established: 2002" } },
+        vajra: { name: "Vajra Wisdom Foundation", description: "Tourism development.", introduction: "Newly established foundation.", founder: "Information not currently available", features: { 0: "Regions: Uvs, Tuv", 1: "Focus: Tourism", 2: "Partners: Agencies" } }
+      },
+
+      // ============================================================
+      // 2. TSETSEN DALT (MEAT)
+      // ============================================================
+      tsetsen: {
+        nav: { group: "Group Home", products: "Products", factory: "Factory", contact: "Contact Us" },
+        hero: { est: "Est. 2005 • Ulaanbaatar", title: "PREMIUM", subtitle: "QUALITY", desc: "Mongolia's trusted partner in sustainable meat production and international export.", order: "Order Products", back: "Back to Group" },
+        stats: { factory: "Factory Facility", freeze: "Deep Freeze Capacity", export: "Global Export Ready" },
+        content: { title: "Our Standards", desc: "Tsetsen Dalt Trade LLC has been a cornerstone of the industry since 2005.", list: { 0: "State-of-the-art Hygiene Control", 1: "4 Deep Freezer Units (200-ton)", 2: "Export Experience (China 2018-2020)", 3: "Located in Ulaanbaatar" }, sales: "Sales Department" },
+        contact: { back: "Back to Tsetsen Dalt Home", title: "Factory Contact", subtitle: "Direct line to our meat processing facility and export department.", sales: "Sales & Export", email: "Email Inquiries", location: "Factory Location", zone: "Industrial Zone", district: "Khan-Uul District, Ulaanbaatar", hours: { title: "Operating Hours", mon: "Mon - Fri", sat: "Saturday", sun: "Sunday", closed: "Closed" } }
+      },
+
+      // ============================================================
+      // 3. LANSYN TSATSAL (DAIRY)
+      // ============================================================
+      lansyn: {
+        nav: { group: "Group Home", farm: "Our Farm", contact: "Contact" },
+        hero: { est: "Est. 2005 • Pure Mongolian Dairy", title: "Pure. Fresh.", subtitle: "Natural.", desc: "Bringing the freshness of Baganuur's pastures directly to Ulaanbaatar families.", partner: "Partner With Us", back: "Back to Group" },
+        features: { title: "Sustainable Farming", subtitle: "Operating in Ulaanbaatar & Baganuur District.", eco: { title: "Eco-Friendly", desc: "Sustainable grazing practices." }, dairy: { title: "Premium Dairy", desc: "High-quality milk processing." }, loc: { title: "Strategic Location", desc: "Located in Baganuur District." } },
+        contact: { title: "Freshness You Can Trust", pageTitle: "Contact Lansyn Tsatsal", pageSubtitle: "Reach out to our farm and distribution center.", call: "Call Us", email: "Email Us", location: "Farm Location", back: "Back to Home" }
+      },
+
+      // ============================================================
+      // 4. DANISTA-OD (TRADE)
+      // ============================================================
+      danista: {
+        nav: { group: "Group Home", services: "Services", lease: "Leasing", contact: "Contact" },
+        hero: {
+          est: "Since 2002 • Erdenet City",
+          title: "Hub of Commerce",
+          subtitle: "& Services",
+          desc: "Danista-Od LLC is a premier trade and service center located in the heart of Orkhon Province. We connect businesses with customers through modern leasing solutions.",
+          lease: "Leasing Inquiry",
+          back: "Back to Group"
         },
-        stats: {
-          founded: "Founded",
-          subsidiaries: "Subsidiaries",
-          sectors: "Key Sectors",
-          zones: "Economic Zones",
-          central: "Central"
+        features: {
+          trade: { title: "Trade Center", desc: "A bustling hub for retail and commerce in Erdenet." },
+          service: { title: "Premium Services", desc: "High-quality facilities management and customer services." },
+          location: { title: "Prime Location", desc: "Strategically situated in the center of Erdenet City." }
         },
-        journey: {
-          title: "Our Journey",
-          p1: "Established in <strong class='text-white'>2011</strong>, Land Mineral Group began with a vision to harness Mongolia's rich natural resources responsibly. Over the last 15 years, we have expanded from a single entity into a robust group with <strong class='text-white'>4 subsidiary companies</strong>.",
-          p2: "Today, our operations span the full economic spectrum. We don't just extract resources; we process food, export goods, lease property, and provide financial services.",
-          focusTitle: "Strategic Focus Areas",
-          focusList: {
-            0: "Responsible Mining",
-            1: "Food Security (Meat/Dairy)",
-            2: "Import/Export Logistics",
-            3: "Commercial Leasing"
-          },
-          quote: "We are committed to diversifying Mongolia's economy through sustainable industry and service excellence."
-        },
-        values: {
-          title: "Our Core Values",
-          subtitle: "The principles that guide our 15-year legacy.",
-          items: {
-            sustainability: { title: "Sustainability", desc: "We prioritize environmental stewardship in mining and agriculture, ensuring resources serve future generations." },
-            innovation: { title: "Innovation", desc: "From advanced industrial manufacturing to modern coffee shop services, we constantly evolve." },
-            integrity: { title: "Integrity", desc: "Transparent governance and secured lending services that build lasting trust with our partners." },
-            community: { title: "Community", desc: "Creating jobs and supporting local infrastructure across Mongolia's key economic regions." }
-          }
-        },
-        cta: {
-          title: "Ready to Partner With Us?",
-          desc: "Whether you are looking for agricultural products, mining cooperation, or commercial leasing, Land Mineral Group is your trusted partner.",
-          button: "Contact Us"
+        contact: {
+            back: "Back to Danista Home",
+            title: "Leasing & Management",
+            subtitle: "Contact our administration office for rental opportunities.",
+            phone: "Administration",
+            email: "Leasing Inquiries",
+            location: "Center Location",
+            hours: "Business Hours",
+            weekdays: "Mon-Fri: 09:00 - 20:00",
+            weekend: "Sat-Sun: 10:00 - 18:00"
         }
       },
-      // --- NEW: BRANCH DETAIL PAGE LABELS ---
-      branchDetail: {
-        overview: "Company Overview",
-        highlights: "Key Highlights",
-        founder: "Founder Information",
-        glance: "At a Glance",
-        established: "Established",
-        headquarters: "Headquarters",
-        website: "Visit Website",
-        opensTab: "Opens in a new tab",
-        hqLocation: "Ulaanbaatar, Mongolia"
-      },
-      companies: {
-        mining: {
-          name: "Mining & Industry",
-          description: "Sustainable mining operations and industrial manufacturing projects.",
-          introduction: "Leading the way in responsible mineral extraction and heavy industry.",
-          founder: "Founder Info Not Available",
-          features: { 0: "Sustainable extraction methods", 1: "Heavy machinery logistics", 2: "Rehabilitation projects" }
+
+      // ============================================================
+      // 5. VAJRA WISDOM FOUNDATION (TOURISM)
+      // ============================================================
+      vajra: {
+        nav: { group: "Group Home", tourism: "Tourism", projects: "Projects", contact: "Contact" },
+        hero: {
+          est: "Preserving Heritage • Empowering Communities",
+          title: "Discover",
+          subtitle: "Mongolia",
+          desc: "Vajra Wisdom Foundation is dedicated to developing sustainable tourism and cultural travel initiatives across Ulaanbaatar, Uvs, and Tuv provinces.",
+          explore: "Explore Initiatives",
+          back: "Back to Group"
         },
-        agriculture: {
-          name: "Tsetsen Dald Trade LLC",
-          description: "Meat production, trade, and export.",
-          introduction: "Specializing in meat and meat product production, trade, and export. Our facility operates on a 3.5-hectare site in Ulaanbaatar.",
-          founder: "Information not currently available",
-          features: { 0: "Factory facility: 3.5 hectares in Ulaanbaatar", 1: "Storage: 4 deep freezers with 200-ton capacity", 2: "Experience: Exported meat products to China (2018–2020)" }
+        features: {
+          culture: { title: "Cultural Tourism", desc: "Promoting Mongolia's rich nomadic heritage to the world." },
+          region: { title: "Regional Growth", desc: "Active projects in Uvs, Tuv, and Ulaanbaatar." },
+          partner: { title: "Strategic Partnerships", desc: "Collaborating with leading travel agencies." }
         },
-        dairy: {
-          name: "Lansyn Tsatsal LLC",
-          description: "Dairy products and sustainable farming operations.",
-          introduction: "A premier dairy and farming enterprise operating in Ulaanbaatar and Baganuur district, dedicated to providing fresh, high-quality milk and dairy products.",
-          founder: "Information not currently available",
-          features: { 0: "Sector: Milk & Dairy Products", 1: "Operations: Sustainable Farming", 2: "Location: Ulaanbaatar & Baganuur District" }
-        },
-        danista: {
-          name: "Danista-Od LLC",
-          description: "Trade, service, and commercial leasing operations.",
-          introduction: "A key player in the trade and service sector, operating commercial and leasing facilities in the heart of Erdenet City.",
-          founder: "Information not currently available",
-          features: { 0: "Location: Orkhon Province, Erdenet City", 1: "Activities: Trade, Services, Leasing", 2: "Established: 2002" }
-        },
-        vajra: {
-          name: "Vajra Wisdom Foundation",
-          description: "Tourism and travel initiatives across Mongolia.",
-          introduction: "A newly established foundation focused on tourism development, operating in Ulaanbaatar, Uvs, and Tuv provinces in collaboration with leading travel agencies.",
-          founder: "Information not currently available",
-          features: { 0: "Regions: Ulaanbaatar, Uvs, Tuv Aimag", 1: "Focus: Tourism & Cultural Travel", 2: "Partners: Collaboration with tourism companies" }
+        contact: {
+            back: "Back to Vajra Home",
+            title: "Partner With Us",
+            subtitle: "Let's build the future of Mongolian tourism together.",
+            phone: "Foundation Office",
+            email: "Partnership Inquiries",
+            location: "Headquarters",
+            hours: "Office Hours",
+            weekdays: "Mon-Fri: 09:00 - 18:00",
+            weekend: "Sat-Sun: Closed"
         }
       }
     }
   },
   mn: {
     translation: {
-      nav: {
-        home: "Нүүр",
-        branches: "Салбар Компаниуд",
-        about: "Бидний Тухай",
-        contact: "Холбоо Барих",
-      },
-      hero: {
-        title: "Монгол Улсын эдийн засгийн",
-        titleHighlight: "Гол салбарууд дахь өсөлт",
-        subtitle: "Уул уурхай • Хөдөө аж ахуй • Худалдаа • Үйлчилгээ",
-        cta: "Бидний Тухай",
-      },
-      network: {
-        subtitle: "Группийн Бүтэц",
-        title: "Үйл Ажиллагааны Дөрвөн Тулгуур",
-        link: "Компанийн засаглалыг харах",
-        learnMore: "Дэлгэрэнгүй"
-      },
-      story: {
-        established: "2011 ОНД БАЙГУУЛАГДСАН",
-        title: "Эдийн Засгийн Бүсүүд дэх Тогтвортой Үйл Ажиллагаа",
-        description: "Ланд Минерал Групп ХХК нь 2011 онд байгуулагдсан. Тус групп нь 4 охин компанийн бүтэцтэйгээр Монгол Улсын эдийн засгийн гол бүсүүдэд тогтвортой үйл ажиллагаа явуулж байна.",
-        areas: "Үйл ажиллагааны үндсэн чиглэлүүд:",
-        link: "Дэлгэрэнгүй түүх",
-        experience: "Жилийн Туршлага",
-        activityList: {
-            0: "Уул уурхай",
-            1: "Хүнс, хөдөө аж ахуй",
-            2: "Мах, махан бүтээгдэхүүн",
-            3: "Сүү, сүүн бүтээгдэхүүн",
-            4: "Худалдаа",
-            5: "Экспорт",
-            6: "Үйлчилгээ",
-            7: "Түрээс",
-            8: "Үйлдвэрлэл",
-            9: "Кофе шоп",
-            10: "Зээлдүүлэн барьцаалах үйлчилгээ"
-        }
-      },
-      about: {
-        header: {
-          profile: "Компанийн Танилцуулга",
-          title: "Үеийн Үед",
-          titleHighlight: "Үнэ Цэнийг Бүтээнэ",
-          description: "Ланд Минерал Групп ХХК нь 2011 онд байгуулагдсан олон салбарт үйл ажиллагаа явуулдаг групп компани юм. Бид Уул уурхай, Хөдөө аж ахуй, Худалдаа, Үйлчилгээ гэсэн дөрвөн үндсэн тулгуурт тогтвортой үйл ажиллагаа явуулж байна."
-        },
-        stats: {
-          founded: "Байгуулагдсан",
-          subsidiaries: "Охин Компани",
-          sectors: "Гол Салбарууд",
-          zones: "Эдийн Засгийн Бүс",
-          central: "Төвийн"
-        },
-        journey: {
-          title: "Бидний Түүх",
-          p1: "<strong class='text-white'>2011</strong> онд байгуулагдсан Ланд Минерал Групп нь Монгол орны байгалийн баялгийг хариуцлагатайгаар ашиглах зорилготойгоор эхэлсэн. Өнгөрсөн 15 жилийн хугацаанд бид нэг аж ахуйн нэгжээс <strong class='text-white'>4 охин компани</strong> бүхий томоохон групп болон өргөжсөн.",
-          p2: "Өнөөдөр бидний үйл ажиллагаа эдийн засгийн өргөн хүрээг хамарч байна. Бид зөвхөн олборлолт хийгээд зогсохгүй хүнсний үйлдвэрлэл, экспорт, үл хөдлөх хөрөнгийн түрээс, санхүүгийн үйлчилгээ үзүүлж байна.",
-          focusTitle: "Стратегийн Тэргүүлэх Чиглэлүүд",
-          focusList: {
-            0: "Хариуцлагатай Уул Уурхай",
-            1: "Хүнсний Аюулгүй Байдал (Мах/Сүү)",
-            2: "Импорт/Экспортын Ложистик",
-            3: "Худалдааны Түрээс"
-          },
-          quote: "Бид тогтвортой аж үйлдвэр, үйлчилгээний шилдэг чанараар дамжуулан Монгол Улсын эдийн засгийг төрөлжүүлэхийн төлөө ажиллаж байна."
-        },
-        values: {
-          title: "Бидний Үнэт Зүйлс",
-          subtitle: "Бидний 15 жилийн түүхийг тодорхойлох зарчмууд.",
-          items: {
-            sustainability: { title: "Тогтвортой Байдал", desc: "Бид уул уурхай, хөдөө аж ахуйн салбарт байгаль орчныг хамгаалахыг эн тэргүүнд тавьж, ирээдүй хойч үедээ баялгаа өвлүүлэхийг зорьдог." },
-            innovation: { title: "Инноваци", desc: "Аж үйлдвэрийн дэвшилтэт үйлдвэрлэлээс эхлээд орчин үеийн кофе шопын үйлчилгээ хүртэл бид байнга шинэчлэгдэн хөгжиж байна." },
-            integrity: { title: "Шударга Байдал", desc: "Ил тод засаглал болон барьцаат зээлийн найдвартай үйлчилгээ нь бидний харилцагчидтайгаа тогтоосон итгэлцлийн үндэс юм." },
-            community: { title: "Нийгмийн Хариуцлага", desc: "Монгол Улсын эдийн засгийн гол бүс нутгуудад ажлын байр бий болгож, орон нутгийн дэд бүтцийг дэмжин ажилладаг." }
-          }
-        },
-        cta: {
-          title: "Бидэнтэй Хамтран Ажиллах уу?",
-          desc: "Та хөдөө аж ахуйн бүтээгдэхүүн, уул уурхайн хамтын ажиллагаа эсвэл худалдааны түрээс сонирхож байвал Ланд Минерал Групп таны найдвартай түнш байх болно.",
-          button: "Холбоо Барих"
-        }
-      },
-      // --- NEW: BRANCH DETAIL PAGE LABELS (MONGOLIAN) ---
-      branchDetail: {
-        overview: "Компанийн Танилцуулга",
-        highlights: "Онцлох Үзүүлэлтүүд",
-        founder: "Үүсгэн Байгуулагч",
-        glance: "Товчхон",
-        established: "Байгуулагдсан",
-        headquarters: "Төв Оффис",
-        website: "Вебсайт руу зочлох",
-        opensTab: "Шинэ цонхонд нээгдэнэ",
-        hqLocation: "Монгол улс, Улаанбаатар"
-      },
+      // ============================================================
+      // 1. MAIN SITE (MONGOLIAN)
+      // ============================================================
+      nav: { home: "Нүүр", branches: "Салбар Компаниуд", about: "Бидний Тухай", contact: "Холбоо Барих" },
+      hero: { title: "Монгол Улсын эдийн засгийн", titleHighlight: "Гол салбарууд дахь өсөлт", subtitle: "Уул уурхай • Хөдөө аж ахуй • Худалдаа • Үйлчилгээ", cta: "Бидний багцтай танилцах" },
+      network: { subtitle: "Группийн Бүтэц", title: "Үйл Ажиллагааны Дөрвөн Тулгуур", link: "Компанийн засаглалыг харах", learnMore: "Дэлгэрэнгүй" },
+      story: { established: "2011 ОНД БАЙГУУЛАГДСАН", title: "Эдийн Засгийн Бүсүүд дэх Тогтвортой Үйл Ажиллагаа", description: "Ланд Минерал Групп ХХК нь 2011 онд байгуулагдсан. Тус групп нь 4 охин компанийн бүтэцтэйгээр Монгол Улсын эдийн засгийн гол бүсүүдэд тогтвортой үйл ажиллагаа явуулж байна.", areas: "Үйл ажиллагааны үндсэн чиглэлүүд:", link: "Дэлгэрэнгүй түүх", experience: "Жилийн Туршлага", activityList: { 0: "Уул уурхай", 1: "Хүнс, хөдөө аж ахуй", 2: "Мах, махан бүтээгдэхүүн", 3: "Сүү, сүүн бүтээгдэхүүн", 4: "Худалдаа", 5: "Экспорт", 6: "Үйлчилгээ", 7: "Түрээс", 8: "Үйлдвэрлэл", 9: "Кофе шоп", 10: "Зээлдүүлэн барьцаалах үйлчилгээ" } },
+      about: { header: { profile: "Компанийн Танилцуулга", title: "Үеийн Үед", titleHighlight: "Үнэ Цэнийг Бүтээнэ", description: "Ланд Минерал Групп ХХК нь 2011 онд байгуулагдсан..." }, stats: { founded: "Байгуулагдсан", subsidiaries: "Охин Компани", sectors: "Гол Салбарууд", zones: "Эдийн Засгийн Бүс", central: "Төвийн" }, journey: { title: "Бидний Түүх", p1: "2011 онд байгуулагдсан...", p2: "Өнөөдөр бидний үйл ажиллагаа...", focusTitle: "Стратегийн Чиглэлүүд", focusList: { 0: "Хариуцлагатай Уул Уурхай", 1: "Хүнсний Аюулгүй Байдал", 2: "Ложистик", 3: "Түрээс" }, quote: "Эдийн засгийг төрөлжүүлэхийн төлөө." }, values: { title: "Бидний Үнэт Зүйлс", subtitle: "Зарчмууд.", items: { sustainability: { title: "Тогтвортой Байдал", desc: "Байгаль орчныг хамгаалах." }, innovation: { title: "Инноваци", desc: "Байнга шинэчлэгдэх." }, integrity: { title: "Шударга Байдал", desc: "Ил тод засаглал." }, community: { title: "Нийгмийн Хариуцлага", desc: "Ажлын байр." } } }, cta: { title: "Хамтран Ажиллах уу?", desc: "Бидэнтэй холбогдоорой.", button: "Холбоо Барих" } },
+      branchDetail: { overview: "Компанийн Танилцуулга", highlights: "Онцлох Үзүүлэлтүүд", founder: "Үүсгэн Байгуулагч", glance: "Товчхон", established: "Байгуулагдсан", headquarters: "Төв Оффис", website: "Вебсайт руу зочлох", opensTab: "Шинэ цонхонд нээгдэнэ", hqLocation: "Монгол улс, Улаанбаатар" },
       companies: {
-        mining: {
-          name: "Уул Уурхай & Аж Үйлдвэр",
-          description: "Тогтвортой уул уурхайн олборлолт болон аж үйлдвэрийн төслүүд.",
-          introduction: "Хариуцлагатай ашигт малтмал олборлолт, хүнд үйлдвэрийн салбарт тэргүүлэгч.",
-          founder: "Мэдээлэл байхгүй",
-          features: { 0: "Тогтвортой олборлолтын аргууд", 1: "Хүнд машин механизмын ложистик", 2: "Нөхөн сэргээлтийн төслүүд" }
+        mining: { name: "Уул Уурхай & Аж Үйлдвэр", description: "Тогтвортой уул уурхай.", introduction: "Хариуцлагатай олборлолт.", founder: "Мэдээлэл байхгүй", features: { 0: "Тогтвортой олборлолт", 1: "Хүнд машин механизм", 2: "Нөхөн сэргээлт" } },
+        agriculture: { name: "Цэцэн Далт Трейд ХХК", description: "Мах, махан бүтээгдэхүүн.", introduction: "Мах, махан бүтээгдэхүүний үйлдвэрлэл.", founder: "Мэдээлэл байхгүй", features: { 0: "Үйлдвэр: 3.5 га газар", 1: "Хадгалалт: 4 гүн хөлдөөгч", 2: "Туршлага: БНХАУ руу экспортолсон" } },
+        dairy: { name: "Лансын Цацал ХХК", description: "Сүү, сүүн бүтээгдэхүүн.", introduction: "Фермийн аж ахуй.", founder: "Мэдээлэл байхгүй", features: { 0: "Салбар: Сүү", 1: "Үйл ажиллагаа: Ферм", 2: "Байршил: Улаанбаатар" } },
+        danista: { name: "Даниста-Од ХХК", description: "Худалдаа, үйлчилгээ.", introduction: "Худалдааны төв.", founder: "Мэдээлэл байхгүй", features: { 0: "Байршил: Эрдэнэт", 1: "Үйл ажиллагаа: Түрээс", 2: "Байгуулагдсан: 2002" } },
+        vajra: { name: "Важра Висдом Сан", description: "Аялал жуулчлал.", introduction: "Шинэ сан.", founder: "Мэдээлэл байхгүй", features: { 0: "Бүс: Увс, Төв", 1: "Чиглэл: Аялал", 2: "Түншлэл: Компаниуд" } }
+      },
+
+      // ============================================================
+      // 2. TSETSEN DALT (MONGOLIAN)
+      // ============================================================
+      tsetsen: {
+        nav: { group: "Групп Нүүр", products: "Бүтээгдэхүүн", factory: "Үйлдвэр", contact: "Холбоо Барих" },
+        hero: { est: "2005 онд байгуулагдсан • Улаанбаатар", title: "ДЭЭД", subtitle: "ЗЭРГИЙН ЧАНАР", desc: "Монгол улсын тогтвортой мах үйлдвэрлэл, экспортын итгэлт түнш.", order: "Захиалга Өгөх", back: "Групп руу буцах" },
+        stats: { factory: "Үйлдвэрийн Байр", freeze: "Гүн Хөлдөөгч", export: "Экспортод Бэлэн" },
+        content: { title: "Бидний Стандарт", desc: "Цэцэн Далт Трейд ХХК нь 2005 оноос хойш салбарын тулгуур багана байсаар ирсэн. Бид малчдын хотноос эцсийн бүтээгдэхүүн хүртэл чанарын хатуу хяналтыг хэрэгжүүлдэг.", list: { 0: "Эрүүл ахуйн дээд зэргийн хяналт", 1: "4 Гүн хөлдөөгч (200 тн)", 2: "Экспортын туршлага (БНХАУ 2018-2020)", 3: "Улаанбаатар хотод байршилтай" }, sales: "Борлуулалтын Алба" },
+        contact: { back: "Цэцэн Далт Нүүр Хуудас", title: "Үйлдвэртэй Холбогдох", subtitle: "Мах боловсруулах үйлдвэр болон экспортын албатай шууд холбогдох.", sales: "Борлуулалт & Экспорт", email: "Имэйл Хаяг", location: "Үйлдвэрийн Байршил", zone: "Аж үйлдвэрийн бүс", district: "Хан-Уул дүүрэг, Улаанбаатар", hours: { title: "Цагийн Хуваарь", mon: "Даваа - Баасан", sat: "Бямба", sun: "Ням", closed: "Амарна" } }
+      },
+
+      // ============================================================
+      // 3. LANSYN TSATSAL (MONGOLIAN)
+      // ============================================================
+      lansyn: {
+        nav: { group: "Групп Нүүр", farm: "Фермийн Тухай", contact: "Холбоо Барих" },
+        hero: { est: "2005 он • Монгол Сүүний Үйлдвэр", title: "Цэвэр.", subtitle: "Шинэхэн.", desc: "Багануур дүүргийн бэлчээрээс Улаанбаатарын хэрэглэгчдэд шууд хүргэж байна.", partner: "Хамтран Ажиллах", back: "Групп руу буцах" },
+        features: { title: "Тогтвортой Фермийн Аж Ахуй", subtitle: "Амьтны тав тух болон бүтээгдэхүүний цэвэр байдалд анхааран Улаанбаатар, Багануур дүүрэгт үйл ажиллагаа явуулдаг.", eco: { title: "Байгальд Ээлтэй", desc: "Бэлчээрийг хамгаалах." }, dairy: { title: "Дээд Зэргийн Сүү", desc: "Эрүүл ахуйн хатуу шаардлага." }, loc: { title: "Стратегийн Байршил", desc: "Багануур дүүрэгт байрлаж, ложистикийн оновчтой шийдлийг бүрдүүлсэн." } },
+        contact: { title: "Итгэж Болох Шинэхэн Чанар", pageTitle: "Лансын Цацалтай Холбогдох", pageSubtitle: "Манай ферм болон түгээлтийн төвтэй холбогдоорой.", call: "Залгах", email: "Имэйл Бичих", location: "Фермийн Байршил", back: "Нүүр хуудас руу буцах" }
+      },
+
+      // ============================================================
+      // 4. DANISTA-OD (MONGOLIAN)
+      // ============================================================
+      danista: {
+        nav: { group: "Групп Нүүр", services: "Үйлчилгээ", lease: "Түрээс", contact: "Холбоо Барих" },
+        hero: {
+          est: "2002 оноос хойш • Эрдэнэт хот",
+          title: "Худалдаа,",
+          subtitle: "Үйлчилгээний Төв",
+          desc: "Даниста-Од ХХК нь Орхон аймгийн төвд байрлах худалдаа, үйлчилгээний тэргүүлэх төв юм. Бид бизнесийн таатай орчныг бүрдүүлж, түрээсийн цогц шийдлийг санал болгож байна.",
+          lease: "Түрээсийн Лавлах",
+          back: "Групп руу буцах"
         },
-        agriculture: {
-          name: "Цэцэн Далд Трейд ХХК",
-          description: "Мах, махан бүтээгдэхүүний үйлдвэрлэл, худалдаа, экспорт.",
-          introduction: "Мах, махан бүтээгдэхүүний үйлдвэрлэл, худалдаа, экспортын чиглэлээр мэргэшсэн. Улаанбаатар хотод 3.5 га газарт үйлдвэрийн үйл ажиллагаа явуулдаг.",
-          founder: "Мэдээлэл байхгүй",
-          features: { 0: "Үйлдвэрийн объект: Улаанбаатар хотод 3.5 га газар", 1: "Хадгалалт: 200 тонны багтаамжтай 4 гүн хөлдөөгч", 2: "Туршлага: 2018–2020 онд БНХАУ-д махан бүтээгдэхүүн экспортолсон" }
+        features: {
+          trade: { title: "Худалдааны Төв", desc: "Эрдэнэт хотын худалдааны гол цэг." },
+          service: { title: "Дээд Зэрэглэлийн Үйлчилгээ", desc: "Байгууламжийн менежмент болон харилцагчийн үйлчилгээ." },
+          location: { title: "Стратегийн Байршил", desc: "Хотын төв цэгт байршилтай." }
         },
-        dairy: {
-          name: "Лансын Цацал ХХК",
-          description: "Сүү, сүүн бүтээгдэхүүн, фермийн аж ахуй.",
-          introduction: "Улаанбаатар хот болон Багануур дүүрэгт үйл ажиллагаа явуулдаг, шинэхэн, чанартай сүү, сүүн бүтээгдэхүүн нийлүүлэх зорилготой фермийн аж ахуй.",
-          founder: "Мэдээлэл байхгүй",
-          features: { 0: "Салбар: Сүү & Сүүн бүтээгдэхүүн", 1: "Үйл ажиллагаа: Тогтвортой фермийн аж ахуй", 2: "Байршил: Улаанбаатар & Багануур дүүрэг" }
+        contact: {
+            back: "Даниста Нүүр Хуудас",
+            title: "Түрээс & Менежмент",
+            subtitle: "Түрээсийн талаар мэдээлэл авах бол манай захиргаатай холбогдоно уу.",
+            phone: "Захиргаа",
+            email: "Түрээсийн Лавлах",
+            location: "Байршил",
+            hours: "Цагийн Хуваарь",
+            weekdays: "Даваа-Баасан: 09:00 - 20:00",
+            weekend: "Бямба-Ням: 10:00 - 18:00"
+        }
+      },
+
+      // ============================================================
+      // 5. VAJRA WISDOM (MONGOLIAN)
+      // ============================================================
+      vajra: {
+        nav: { group: "Групп Нүүр", tourism: "Аялал Жуулчлал", projects: "Төслүүд", contact: "Холбоо Барих" },
+        hero: {
+          est: "Өвийг Хадгалах • Хамтдаа Хөгжих",
+          title: "Монголыг",
+          subtitle: "Нээгээрэй",
+          desc: "Важра Висдом Сан нь Улаанбаатар, Увс, Төв аймгуудын аялал жуулчлал, соёлын аяллыг хөгжүүлэхэд чиглэсэн тогтвортой санаачилгуудыг хэрэгжүүлдэг.",
+          explore: "Санаачилгууд",
+          back: "Групп руу буцах"
         },
-        danista: {
-          name: "Даниста-Од ХХК",
-          description: "Худалдаа, үйлчилгээ, түрээсийн үйл ажиллагаа.",
-          introduction: "Эрдэнэт хотын төвд худалдаа, үйлчилгээ, түрээсийн чиглэлээр үйл ажиллагаа явуулдаг салбарын гол тоглогч.",
-          founder: "Мэдээлэл байхгүй",
-          features: { 0: "Байршил: Орхон аймаг, Эрдэнэт хот", 1: "Үйл ажиллагаа: Худалдаа, Үйлчилгээ, Түрээс", 2: "Байгуулагдсан: 2002 он" }
+        features: {
+          culture: { title: "Соёлын Аялал", desc: "Монголын нүүдэлчин ахуй соёлыг дэлхийд таниулах." },
+          region: { title: "Бүс Нутгийн Хөгжил", desc: "Увс, Төв аймаг, Улаанбаатар дахь идэвхтэй төслүүд." },
+          partner: { title: "Стратегийн Түншлэл", desc: "Тэргүүлэх аялал жуулчлалын агентлагуудтай хамтран ажилладаг." }
         },
-        vajra: {
-          name: "Важра Висдом Сан",
-          description: "Аялал жуулчлалын хөгжүүлэлт.",
-          introduction: "Улаанбаатар, Увс, Төв аймгуудад аялал жуулчлалын компаниудтай хамтран үйл ажиллагаа явуулдаг шинээр байгуулагдсан сан.",
-          founder: "Мэдээлэл байхгүй",
-          features: { 0: "Бүс нутаг: Улаанбаатар, Увс, Төв аймаг", 1: "Чиглэл: Аялал жуулчлал & Соёлын аялал", 2: "Түншлэл: Аялал жуулчлалын компаниудтай хамтран ажилладаг" }
+        contact: {
+            back: "Важра Нүүр Хуудас",
+            title: "Бидэнтэй Хамтран Ажиллах",
+            subtitle: "Монголын аялал жуулчлалын ирээдүйг хамтдаа бүтээцгээе.",
+            phone: "Сангийн Оффис",
+            email: "Түншлэл",
+            location: "Төв Оффис",
+            hours: "Цагийн Хуваарь",
+            weekdays: "Даваа-Баасан: 09:00 - 18:00",
+            weekend: "Бямба-Ням: Амарна"
         }
       }
     }
