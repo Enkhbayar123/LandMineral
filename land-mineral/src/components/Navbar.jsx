@@ -1,124 +1,134 @@
-import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+// src/components/Navbar.jsx
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { ChevronDown, Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { BRANCH_COMPANIES } from "../mockData";
+import { useTranslation } from "react-i18next"; // <--- Import this
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(); // <--- Hook
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Language Toggle
+  // Helper to toggle language
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'mn' : 'en';
     i18n.changeLanguage(newLang);
   };
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-slate-900/95 backdrop-blur-md py-4 shadow-xl" : "bg-transparent py-6"
-      }`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center text-white">
-        
-        {/* LOGO SECTION */}
-        <Link to="/" className="flex items-center gap-3 group">
-          {/* Main Logo Image */}
-          <img 
-            src="/lmg-logo.png" 
-            alt="Land Mineral Group Logo" 
-            className="w-12 h-12 object-contain group-hover:scale-105 transition-transform duration-300" 
-          />
-          <div className="flex flex-col">
-            <span className="font-bold text-xl tracking-tight leading-none uppercase">Land Mineral</span>
-            <span className="text-xs tracking-[0.2em] text-slate-400 group-hover:text-white transition-colors">Group</span>
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-          <Link to="/" className="hover:text-blue-400 transition-colors relative group">
-            {t('nav.home')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
-          </Link>
+    <nav className="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 text-slate-100">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center h-20">
           
-          <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-blue-400 transition-colors">
-              {t('nav.branches')} <ChevronDown size={14} />
-            </button>
-            {/* Dropdown */}
-            <div className="absolute top-full -left-4 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-              <div className="bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-4 w-64 flex flex-col gap-2">
-                <Link to="/branches/mining" className="block p-2 hover:bg-slate-800 rounded text-slate-300 hover:text-white">Mining & Industry</Link>
-                <Link to="/tsetsen-dalt" className="block p-2 hover:bg-slate-800 rounded text-slate-300 hover:text-white">Tsetsen Dalt (Meat)</Link>
-                <Link to="/lansyn-tsatsal" className="block p-2 hover:bg-slate-800 rounded text-slate-300 hover:text-white">Lansyn Tsatsal (Dairy)</Link>
-                <Link to="/danista-od" className="block p-2 hover:bg-slate-800 rounded text-slate-300 hover:text-white">Danista-Od (Trade)</Link>
-                <Link to="/vajra-wisdom" className="block p-2 hover:bg-slate-800 rounded text-slate-300 hover:text-white">Vajra Wisdom (Tourism)</Link>
-              </div>
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold tracking-tighter flex items-center gap-3">
+            {/* NEW: Image Tag */}
+            <img 
+              src={"/lmg-logo.png"} 
+              alt="Land Mineral Group Logo" 
+              className="h-10 w-auto object-contain" 
+            />
+            
+            {/* Existing Text */}
+            <div className="flex items-center gap-2">
+              <span className="text-emerald-500">LAND</span>
+              <span className="text-white">MINERAL GROUP</span>
             </div>
-          </div>
-
-          <Link to="/about" className="hover:text-blue-400 transition-colors relative group">
-            {t('nav.about')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
           </Link>
 
-          {/* Language Button */}
-          <button 
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-1 border border-slate-600 rounded-full hover:bg-white hover:text-slate-900 transition-all text-xs uppercase"
-          >
-            <Globe size={14} /> {i18n.language === 'en' ? 'MN' : 'EN'}
-          </button>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <NavLink to="/" className={({ isActive }) => 
+              `hover:text-emerald-400 transition-colors ${isActive ? 'text-emerald-500' : ''}`
+            }>
+              {t('nav.home')}
+            </NavLink>
 
-          <Link
-            to="/contact"
-            className="px-6 py-2 bg-blue-600 rounded-sm font-bold text-xs uppercase tracking-widest hover:bg-blue-500 transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]"
-          >
-            {t('nav.contact')}
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-slate-900 border-t border-slate-800 p-6 md:hidden shadow-2xl"
-          >
-            <div className="flex flex-col gap-6 text-center">
-              <Link to="/" onClick={() => setIsOpen(false)} className="text-lg hover:text-blue-400">{t('nav.home')}</Link>
-              <Link to="/about" onClick={() => setIsOpen(false)} className="text-lg hover:text-blue-400">{t('nav.about')}</Link>
-              <Link to="/branches/mining" onClick={() => setIsOpen(false)} className="text-lg text-slate-400 hover:text-white">Mining</Link>
-              <Link to="/tsetsen-dalt" onClick={() => setIsOpen(false)} className="text-lg text-slate-400 hover:text-white">Agriculture</Link>
-              
-              <button onClick={toggleLanguage} className="mx-auto flex items-center gap-2 text-slate-400 hover:text-white">
-                 <Globe size={18} /> {i18n.language === 'en' ? 'Switch to Mongolian' : 'Switch to English'}
+            {/* Dropdown Container */}
+            <div 
+              className="relative group h-20 flex items-center"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <button className="flex items-center gap-1 hover:text-emerald-400 transition-colors">
+                {t('nav.branches')} <ChevronDown size={16} />
               </button>
 
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="bg-blue-600 py-3 rounded text-white font-bold uppercase">{t('nav.contact')}</Link>
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 15 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-20 left-0 w-64 bg-slate-800 border border-slate-700 rounded-b-md shadow-xl overflow-hidden"
+                  >
+                    <div className="py-2">
+                      {BRANCH_COMPANIES.map((branch) => (
+                        <Link
+                          key={branch.id}
+                          to={branch.path}
+                          className="block px-4 py-3 text-sm text-slate-300 hover:bg-slate-700 hover:text-emerald-400 transition-colors"
+                        >
+                          {/* Use ID to find translation, fallback to English name */}
+                          {t(`branches.${branch.id}`, branch.name)}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <NavLink to="/about" className={({ isActive }) => 
+              `hover:text-emerald-400 transition-colors ${isActive ? 'text-emerald-500' : ''}`
+            }>
+              {t('nav.about')}
+            </NavLink>
+
+            <Link 
+              to="/contact" 
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-md transition-colors font-medium"
+            >
+              {t('nav.contact')}
+            </Link>
+
+            {/* Language Switcher Button */}
+            <button 
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors border border-slate-700 rounded px-2 py-1"
+            >
+                <Globe size={14} />
+                <span className="uppercase text-xs font-bold">{i18n.language === 'en' ? 'MN' : 'EN'}</span>
+            </button>
+
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-slate-100"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </div>
+      
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-slate-900 border-t border-slate-800 p-4">
+          <div className="flex flex-col space-y-4">
+            <Link to="/">{t('nav.home')}</Link>
+            <Link to="/about">{t('nav.about')}</Link>
+            <Link to="/contact">{t('nav.contact')}</Link>
+            <button onClick={toggleLanguage} className="text-left text-emerald-500 font-bold">
+                Switch Language ({i18n.language === 'en' ? 'MN' : 'EN'})
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
