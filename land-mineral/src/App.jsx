@@ -1,29 +1,41 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// --- MAIN SITE COMPONENTS ---
+// =========================================
+// 1. MAIN LAND MINERAL GROUP COMPONENTS
+// =========================================
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import BranchDetail from "./pages/BranchDetail";
-import Contact from "./pages/Contact"; // <--- Import the new Contact page
+import Contact from "./pages/Contact";
 
-// --- TSETSEN DALT (Meat) COMPONENTS ---
+// =========================================
+// 2. TSETSEN DALT (Meat Production)
+// =========================================
 import TsetsenDalt from "./pages/TsetsenDalt"; 
 import TsetsenDaltContact from "./pages/TsetsenDaltContact";
 
-// --- LANSYN TSATSAL (Dairy) COMPONENTS ---
+// =========================================
+// 3. LANSYN TSATSAL (Dairy Farming)
+// =========================================
 import LansynTsatsal from "./pages/LansynTsatsal";
 import LansynTsatsalContact from "./pages/LansynTsatsalContact";
+import LansynTsatsalGallery from "./pages/LansynTsatsalGallery"; // <--- Farm Gallery
 
-// --- DANISTA-OD (Trade) COMPONENTS ---
+// =========================================
+// 4. DANISTA-OD (Trade & Service)
+// =========================================
 import DanistaOd from "./pages/DanistaOd";
 import DanistaOdContact from "./pages/DanistaOdContact";
 
-// --- VAJRA WISDOM (Tourism) COMPONENTS ---
+// =========================================
+// 5. VAJRA WISDOM (Tourism & Foundation)
+// =========================================
 import VajraWisdom from "./pages/VajraWisdom";
 import VajraWisdomContact from "./pages/VajraWisdomContact";
+import VajraWisdomRetreat from "./pages/VajraWisdomRetreat"; // <--- Wellness Retreat
 
 function App() {
   return (
@@ -33,40 +45,42 @@ function App() {
         <main className="flex-grow">
           <Routes>
             
-            {/* =========================================
-                1. MAIN LAND MINERAL GROUP WEBSITE 
-               ========================================= */}
+            {/* -----------------------------------------------------
+                1. MAIN CORPORATE SITE 
+               ----------------------------------------------------- */}
             <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
             <Route path="/about" element={<><Navbar /><About /><Footer /></>} />
-            <Route path="/contact" element={<Contact />} /> {/* <--- Connected here */}
+            <Route path="/contact" element={<Contact />} />
             <Route path="/branches/:branchId" element={<><Navbar /><BranchDetail /><Footer /></>} />
 
 
-            {/* =========================================
-                2. TSETSEN DALT (MEAT PRODUCTION)
-               ========================================= */}
+            {/* -----------------------------------------------------
+                2. TSETSEN DALT (Black/White Theme)
+               ----------------------------------------------------- */}
             <Route path="/tsetsen-dalt" element={<TsetsenDalt />} />
             <Route path="/tsetsen-dalt/contact" element={<TsetsenDaltContact />} />
 
 
-            {/* =========================================
-                3. LANSYN TSATSAL (DAIRY FARMING)
-               ========================================= */}
+            {/* -----------------------------------------------------
+                3. LANSYN TSATSAL (Sky Blue Theme)
+               ----------------------------------------------------- */}
             <Route path="/lansyn-tsatsal" element={<LansynTsatsal />} />
+            <Route path="/lansyn-tsatsal/gallery" element={<LansynTsatsalGallery />} /> {/* Gallery Page */}
             <Route path="/lansyn-tsatsal/contact" element={<LansynTsatsalContact />} />
 
 
-            {/* =========================================
-                4. DANISTA-OD (TRADE & SERVICE)
-               ========================================= */}
+            {/* -----------------------------------------------------
+                4. DANISTA-OD (Orange/Grey Theme)
+               ----------------------------------------------------- */}
             <Route path="/danista-od" element={<DanistaOd />} />
             <Route path="/danista-od/contact" element={<DanistaOdContact />} />
 
 
-            {/* =========================================
-                5. VAJRA WISDOM (TOURISM FOUNDATION)
-               ========================================= */}
+            {/* -----------------------------------------------------
+                5. VAJRA WISDOM (Midnight/Gold Theme)
+               ----------------------------------------------------- */}
             <Route path="/vajra-wisdom" element={<VajraWisdom />} />
+            <Route path="/vajra-wisdom/retreat" element={<VajraWisdomRetreat />} /> {/* Retreat Page */}
             <Route path="/vajra-wisdom/contact" element={<VajraWisdomContact />} />
 
           </Routes>

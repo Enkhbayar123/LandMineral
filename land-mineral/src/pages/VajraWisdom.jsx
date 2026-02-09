@@ -24,6 +24,10 @@ const VajraNavbar = ({ t, i18n }) => {
         </Link>
         <div className="hidden md:flex gap-8 font-medium text-indigo-100 items-center text-sm uppercase tracking-widest">
             <Link to="/" className="hover:text-amber-400 transition-colors">{t('vajra.nav.group')}</Link>
+            
+            <Link to="/vajra-wisdom/retreat" className="hover:text-amber-400 transition-colors">
+                {t('vajra.nav.retreat')}
+            </Link>
             <a href="#initiatives" className="hover:text-amber-400 transition-colors">{t('vajra.nav.tourism')}</a>
             
             <button onClick={toggleLanguage} className="flex items-center gap-1 hover:text-amber-400">
