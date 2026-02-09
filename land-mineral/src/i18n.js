@@ -12,22 +12,8 @@ const resources = {
       nav: { home: "Home", branches: "Branch Companies", about: "About Us", contact: "Contact" },
       hero: { title: "Diversified Growth in", titleHighlight: "Mongolia's Key Sectors", subtitle: "Mining • Agriculture • Trade • Services", cta: "View Our Portfolio" },
       network: { subtitle: "Group Structure", title: "Four Pillars of Operations", link: "View corporate structure", learnMore: "Learn more" },
-      story: {
-        established: "ESTABLISHED 2011",
-        title: "Sustainable Operations Across Economic Zones",
-        description: "Land Mineral Group LLC was founded in 2011. The Group operates sustainably in Mongolia's key economic regions with a structure of 4 subsidiary companies.",
-        areas: "Key Business Areas:",
-        link: "Read our full story",
-        experience: "Years of Excellence",
-        activityList: { 0: "Mining", 1: "Food & Agriculture", 2: "Meat Products", 3: "Dairy Products", 4: "Trade", 5: "Export", 6: "Services", 7: "Leasing", 8: "Manufacturing", 9: "Coffee Shop", 10: "Secured Lending" }
-      },
-      about: {
-         header: { profile: "Corporate Profile", title: "Building Value Across", titleHighlight: "Generations", description: "Land Mineral Group LLC is a diversified conglomerate founded in 2011." },
-         stats: { founded: "Founded", subsidiaries: "Subsidiaries", sectors: "Key Sectors", zones: "Economic Zones", central: "Central" },
-         journey: { title: "Our Journey", p1: "Established in 2011...", p2: "Today, our operations span...", focusTitle: "Strategic Focus Areas", focusList: { 0: "Responsible Mining", 1: "Food Security", 2: "Logistics", 3: "Leasing" }, quote: "Committed to diversifying Mongolia's economy." },
-         values: { title: "Our Core Values", subtitle: "Principles guiding our legacy.", items: { sustainability: { title: "Sustainability", desc: "Environmental stewardship." }, innovation: { title: "Innovation", desc: "Constant evolution." }, integrity: { title: "Integrity", desc: "Transparent governance." }, community: { title: "Community", desc: "Creating jobs." } } },
-         cta: { title: "Ready to Partner?", desc: "Contact us today.", button: "Contact Us" }
-      },
+      story: { established: "ESTABLISHED 2011", title: "Sustainable Operations Across Economic Zones", description: "Land Mineral Group LLC was founded in 2011. The Group operates sustainably in Mongolia's key economic regions with a structure of 4 subsidiary companies.", areas: "Key Business Areas:", link: "Read our full story", experience: "Years of Excellence", activityList: { 0: "Mining", 1: "Food & Agriculture", 2: "Meat Products", 3: "Dairy Products", 4: "Trade", 5: "Export", 6: "Services", 7: "Leasing", 8: "Manufacturing", 9: "Coffee Shop", 10: "Secured Lending" } },
+      about: { header: { profile: "Corporate Profile", title: "Building Value Across", titleHighlight: "Generations", description: "Land Mineral Group LLC is a diversified conglomerate founded in 2011." }, stats: { founded: "Founded", subsidiaries: "Subsidiaries", sectors: "Key Sectors", zones: "Economic Zones", central: "Central" }, journey: { title: "Our Journey", p1: "Established in 2011...", p2: "Today, our operations span...", focusTitle: "Strategic Focus Areas", focusList: { 0: "Responsible Mining", 1: "Food Security", 2: "Logistics", 3: "Leasing" }, quote: "Committed to diversifying Mongolia's economy." }, values: { title: "Our Core Values", subtitle: "Principles guiding our legacy.", items: { sustainability: { title: "Sustainability", desc: "Environmental stewardship." }, innovation: { title: "Innovation", desc: "Constant evolution." }, integrity: { title: "Integrity", desc: "Transparent governance." }, community: { title: "Community", desc: "Creating jobs." } } }, cta: { title: "Ready to Partner?", desc: "Contact us today.", button: "Contact Us" } },
       branchDetail: { overview: "Company Overview", highlights: "Key Highlights", founder: "Founder Information", glance: "At a Glance", established: "Established", headquarters: "Headquarters", website: "Visit Website", opensTab: "Opens in a new tab", hqLocation: "Ulaanbaatar, Mongolia" },
       companies: {
         mining: { name: "Mining & Industry", description: "Sustainable mining operations.", introduction: "Leading the way in responsible extraction.", founder: "Founder Info Not Available", features: { 0: "Sustainable extraction", 1: "Heavy machinery", 2: "Rehabilitation" } },
@@ -38,87 +24,57 @@ const resources = {
       },
 
       // ============================================================
-      // 2. TSETSEN DALT (MEAT)
+      // 2. MAIN CONTACT PAGE (FULLY TRANSLATED)
       // ============================================================
-      tsetsen: {
-        nav: { group: "Group Home", products: "Products", factory: "Factory", contact: "Contact Us" },
-        hero: { est: "Est. 2005 • Ulaanbaatar", title: "PREMIUM", subtitle: "QUALITY", desc: "Mongolia's trusted partner in sustainable meat production and international export.", order: "Order Products", back: "Back to Group" },
-        stats: { factory: "Factory Facility", freeze: "Deep Freeze Capacity", export: "Global Export Ready" },
-        content: { title: "Our Standards", desc: "Tsetsen Dalt Trade LLC has been a cornerstone of the industry since 2005.", list: { 0: "State-of-the-art Hygiene Control", 1: "4 Deep Freezer Units (200-ton)", 2: "Export Experience (China 2018-2020)", 3: "Located in Ulaanbaatar" }, sales: "Sales Department" },
-        contact: { back: "Back to Tsetsen Dalt Home", title: "Factory Contact", subtitle: "Direct line to our meat processing facility and export department.", sales: "Sales & Export", email: "Email Inquiries", location: "Factory Location", zone: "Industrial Zone", district: "Khan-Uul District, Ulaanbaatar", hours: { title: "Operating Hours", mon: "Mon - Fri", sat: "Saturday", sun: "Sunday", closed: "Closed" } }
-      },
-
-      // ============================================================
-      // 3. LANSYN TSATSAL (DAIRY)
-      // ============================================================
-      lansyn: {
-        nav: { group: "Group Home", farm: "Our Farm", contact: "Contact" },
-        hero: { est: "Est. 2005 • Pure Mongolian Dairy", title: "Pure. Fresh.", subtitle: "Natural.", desc: "Bringing the freshness of Baganuur's pastures directly to Ulaanbaatar families.", partner: "Partner With Us", back: "Back to Group" },
-        features: { title: "Sustainable Farming", subtitle: "Operating in Ulaanbaatar & Baganuur District.", eco: { title: "Eco-Friendly", desc: "Sustainable grazing practices." }, dairy: { title: "Premium Dairy", desc: "High-quality milk processing." }, loc: { title: "Strategic Location", desc: "Located in Baganuur District." } },
-        contact: { title: "Freshness You Can Trust", pageTitle: "Contact Lansyn Tsatsal", pageSubtitle: "Reach out to our farm and distribution center.", call: "Call Us", email: "Email Us", location: "Farm Location", back: "Back to Home" }
-      },
-
-      // ============================================================
-      // 4. DANISTA-OD (TRADE)
-      // ============================================================
-      danista: {
-        nav: { group: "Group Home", services: "Services", lease: "Leasing", contact: "Contact" },
+      contactPage: {
         hero: {
-          est: "Since 2002 • Erdenet City",
-          title: "Hub of Commerce",
-          subtitle: "& Services",
-          desc: "Danista-Od LLC is a premier trade and service center located in the heart of Orkhon Province. We connect businesses with customers through modern leasing solutions.",
-          lease: "Leasing Inquiry",
-          back: "Back to Group"
+            title: "Contact",
+            subtitle: "Get in touch with our headquarters. We are ready to answer your questions and discuss partnership opportunities."
         },
-        features: {
-          trade: { title: "Trade Center", desc: "A bustling hub for retail and commerce in Erdenet." },
-          service: { title: "Premium Services", desc: "High-quality facilities management and customer services." },
-          location: { title: "Prime Location", desc: "Strategically situated in the center of Erdenet City." }
+        info: {
+            title: "Headquarters Info",
+            phoneLabel: "Phone Number",
+            hours: "Mon-Fri, 09:00 - 18:00",
+            emailLabel: "Email Address",
+            inquiryLabel: "Official Inquiries",
+            officeLabel: "Main Office",
+            city: "Ulaanbaatar, Mongolia",
+            district: "Sukhbaatar District",
+            workingHoursTitle: "Working Hours",
+            weekdays: "Weekdays",
+            weekends: "Weekends",
+            closed: "Closed"
         },
-        contact: {
-            back: "Back to Danista Home",
-            title: "Leasing & Management",
-            subtitle: "Contact our administration office for rental opportunities.",
-            phone: "Administration",
-            email: "Leasing Inquiries",
-            location: "Center Location",
-            hours: "Business Hours",
-            weekdays: "Mon-Fri: 09:00 - 20:00",
-            weekend: "Sat-Sun: 10:00 - 18:00"
+        form: {
+            title: "Send us a Message",
+            firstName: "First Name",
+            lastName: "Last Name",
+            email: "Email Address",
+            subject: "Subject",
+            message: "Message",
+            placeholder: {
+                first: "John",
+                last: "Doe",
+                email: "john@example.com",
+                msg: "How can we help you?"
+            },
+            options: {
+                general: "General Inquiry",
+                partner: "Partnership Proposal",
+                investor: "Investor Relations",
+                other: "Other"
+            },
+            sendButton: "Send Message"
         }
       },
 
       // ============================================================
-      // 5. VAJRA WISDOM FOUNDATION (TOURISM)
+      // 3. SUBSIDIARY COMPANIES
       // ============================================================
-      vajra: {
-        nav: { group: "Group Home", tourism: "Tourism", projects: "Projects", contact: "Contact" },
-        hero: {
-          est: "Preserving Heritage • Empowering Communities",
-          title: "Discover",
-          subtitle: "Mongolia",
-          desc: "Vajra Wisdom Foundation is dedicated to developing sustainable tourism and cultural travel initiatives across Ulaanbaatar, Uvs, and Tuv provinces.",
-          explore: "Explore Initiatives",
-          back: "Back to Group"
-        },
-        features: {
-          culture: { title: "Cultural Tourism", desc: "Promoting Mongolia's rich nomadic heritage to the world." },
-          region: { title: "Regional Growth", desc: "Active projects in Uvs, Tuv, and Ulaanbaatar." },
-          partner: { title: "Strategic Partnerships", desc: "Collaborating with leading travel agencies." }
-        },
-        contact: {
-            back: "Back to Vajra Home",
-            title: "Partner With Us",
-            subtitle: "Let's build the future of Mongolian tourism together.",
-            phone: "Foundation Office",
-            email: "Partnership Inquiries",
-            location: "Headquarters",
-            hours: "Office Hours",
-            weekdays: "Mon-Fri: 09:00 - 18:00",
-            weekend: "Sat-Sun: Closed"
-        }
-      }
+      tsetsen: { nav: { group: "Group Home", products: "Products", factory: "Factory", contact: "Contact Us" }, hero: { est: "Est. 2005 • Ulaanbaatar", title: "PREMIUM", subtitle: "QUALITY", desc: "Mongolia's trusted partner in sustainable meat production and international export.", order: "Order Products", back: "Back to Group" }, stats: { factory: "Factory Facility", freeze: "Deep Freeze Capacity", export: "Global Export Ready" }, content: { title: "Our Standards", desc: "Tsetsen Dalt Trade LLC has been a cornerstone of the industry since 2005.", list: { 0: "State-of-the-art Hygiene Control", 1: "4 Deep Freezer Units (200-ton)", 2: "Export Experience (China 2018-2020)", 3: "Located in Ulaanbaatar" }, sales: "Sales Department" }, contact: { back: "Back to Tsetsen Dalt Home", title: "Factory Contact", subtitle: "Direct line to our meat processing facility and export department.", sales: "Sales & Export", email: "Email Inquiries", location: "Factory Location", zone: "Industrial Zone", district: "Khan-Uul District, Ulaanbaatar", hours: { title: "Operating Hours", mon: "Mon - Fri", sat: "Saturday", sun: "Sunday", closed: "Closed" } } },
+      lansyn: { nav: { group: "Group Home", farm: "Our Farm", contact: "Contact" }, hero: { est: "Est. 2005 • Pure Mongolian Dairy", title: "Pure. Fresh.", subtitle: "Natural.", desc: "Bringing the freshness of Baganuur's pastures directly to Ulaanbaatar families.", partner: "Partner With Us", back: "Back to Group" }, features: { title: "Sustainable Farming", subtitle: "Operating in Ulaanbaatar & Baganuur District.", eco: { title: "Eco-Friendly", desc: "Sustainable grazing practices." }, dairy: { title: "Premium Dairy", desc: "High-quality milk processing." }, loc: { title: "Strategic Location", desc: "Located in Baganuur District." } }, contact: { title: "Freshness You Can Trust", pageTitle: "Contact Lansyn Tsatsal", pageSubtitle: "Reach out to our farm and distribution center.", call: "Call Us", email: "Email Us", location: "Farm Location", back: "Back to Home" } },
+      danista: { nav: { group: "Group Home", services: "Services", lease: "Leasing", contact: "Contact" }, hero: { est: "Since 2002 • Erdenet City", title: "Hub of Commerce", subtitle: "& Services", desc: "Danista-Od LLC is a premier trade and service center located in the heart of Orkhon Province. We connect businesses with customers through modern leasing solutions.", lease: "Leasing Inquiry", back: "Back to Group" }, features: { trade: { title: "Trade Center", desc: "A bustling hub for retail and commerce in Erdenet." }, service: { title: "Premium Services", desc: "High-quality facilities management and customer services." }, location: { title: "Prime Location", desc: "Strategically situated in the center of Erdenet City." } }, contact: { back: "Back to Danista Home", title: "Leasing & Management", subtitle: "Contact our administration office for rental opportunities.", phone: "Administration", email: "Leasing Inquiries", location: "Center Location", hours: "Business Hours", weekdays: "Mon-Fri: 09:00 - 20:00", weekend: "Sat-Sun: 10:00 - 18:00" } },
+      vajra: { nav: { group: "Group Home", tourism: "Tourism", projects: "Projects", contact: "Contact" }, hero: { est: "Preserving Heritage • Empowering Communities", title: "Discover", subtitle: "Mongolia", desc: "Vajra Wisdom Foundation is dedicated to developing sustainable tourism and cultural travel initiatives across Ulaanbaatar, Uvs, and Tuv provinces.", explore: "Explore Initiatives", back: "Back to Group" }, features: { culture: { title: "Cultural Tourism", desc: "Promoting Mongolia's rich nomadic heritage to the world." }, region: { title: "Regional Growth", desc: "Active projects in Uvs, Tuv, and Ulaanbaatar." }, partner: { title: "Strategic Partnerships", desc: "Collaborating with leading travel agencies." } }, contact: { back: "Back to Vajra Home", title: "Partner With Us", subtitle: "Let's build the future of Mongolian tourism together.", phone: "Foundation Office", email: "Partnership Inquiries", location: "Headquarters", hours: "Office Hours", weekdays: "Mon-Fri: 09:00 - 18:00", weekend: "Sat-Sun: Closed" } },
     }
   },
   mn: {
@@ -141,87 +97,57 @@ const resources = {
       },
 
       // ============================================================
-      // 2. TSETSEN DALT (MONGOLIAN)
+      // 2. MAIN CONTACT PAGE (FULLY TRANSLATED MONGOLIAN)
       // ============================================================
-      tsetsen: {
-        nav: { group: "Групп Нүүр", products: "Бүтээгдэхүүн", factory: "Үйлдвэр", contact: "Холбоо Барих" },
-        hero: { est: "2005 онд байгуулагдсан • Улаанбаатар", title: "ДЭЭД", subtitle: "ЗЭРГИЙН ЧАНАР", desc: "Монгол улсын тогтвортой мах үйлдвэрлэл, экспортын итгэлт түнш.", order: "Захиалга Өгөх", back: "Групп руу буцах" },
-        stats: { factory: "Үйлдвэрийн Байр", freeze: "Гүн Хөлдөөгч", export: "Экспортод Бэлэн" },
-        content: { title: "Бидний Стандарт", desc: "Цэцэн Далт Трейд ХХК нь 2005 оноос хойш салбарын тулгуур багана байсаар ирсэн. Бид малчдын хотноос эцсийн бүтээгдэхүүн хүртэл чанарын хатуу хяналтыг хэрэгжүүлдэг.", list: { 0: "Эрүүл ахуйн дээд зэргийн хяналт", 1: "4 Гүн хөлдөөгч (200 тн)", 2: "Экспортын туршлага (БНХАУ 2018-2020)", 3: "Улаанбаатар хотод байршилтай" }, sales: "Борлуулалтын Алба" },
-        contact: { back: "Цэцэн Далт Нүүр Хуудас", title: "Үйлдвэртэй Холбогдох", subtitle: "Мах боловсруулах үйлдвэр болон экспортын албатай шууд холбогдох.", sales: "Борлуулалт & Экспорт", email: "Имэйл Хаяг", location: "Үйлдвэрийн Байршил", zone: "Аж үйлдвэрийн бүс", district: "Хан-Уул дүүрэг, Улаанбаатар", hours: { title: "Цагийн Хуваарь", mon: "Даваа - Баасан", sat: "Бямба", sun: "Ням", closed: "Амарна" } }
-      },
-
-      // ============================================================
-      // 3. LANSYN TSATSAL (MONGOLIAN)
-      // ============================================================
-      lansyn: {
-        nav: { group: "Групп Нүүр", farm: "Фермийн Тухай", contact: "Холбоо Барих" },
-        hero: { est: "2005 он • Монгол Сүүний Үйлдвэр", title: "Цэвэр.", subtitle: "Шинэхэн.", desc: "Багануур дүүргийн бэлчээрээс Улаанбаатарын хэрэглэгчдэд шууд хүргэж байна.", partner: "Хамтран Ажиллах", back: "Групп руу буцах" },
-        features: { title: "Тогтвортой Фермийн Аж Ахуй", subtitle: "Амьтны тав тух болон бүтээгдэхүүний цэвэр байдалд анхааран Улаанбаатар, Багануур дүүрэгт үйл ажиллагаа явуулдаг.", eco: { title: "Байгальд Ээлтэй", desc: "Бэлчээрийг хамгаалах." }, dairy: { title: "Дээд Зэргийн Сүү", desc: "Эрүүл ахуйн хатуу шаардлага." }, loc: { title: "Стратегийн Байршил", desc: "Багануур дүүрэгт байрлаж, ложистикийн оновчтой шийдлийг бүрдүүлсэн." } },
-        contact: { title: "Итгэж Болох Шинэхэн Чанар", pageTitle: "Лансын Цацалтай Холбогдох", pageSubtitle: "Манай ферм болон түгээлтийн төвтэй холбогдоорой.", call: "Залгах", email: "Имэйл Бичих", location: "Фермийн Байршил", back: "Нүүр хуудас руу буцах" }
-      },
-
-      // ============================================================
-      // 4. DANISTA-OD (MONGOLIAN)
-      // ============================================================
-      danista: {
-        nav: { group: "Групп Нүүр", services: "Үйлчилгээ", lease: "Түрээс", contact: "Холбоо Барих" },
+      contactPage: {
         hero: {
-          est: "2002 оноос хойш • Эрдэнэт хот",
-          title: "Худалдаа,",
-          subtitle: "Үйлчилгээний Төв",
-          desc: "Даниста-Од ХХК нь Орхон аймгийн төвд байрлах худалдаа, үйлчилгээний тэргүүлэх төв юм. Бид бизнесийн таатай орчныг бүрдүүлж, түрээсийн цогц шийдлийг санал болгож байна.",
-          lease: "Түрээсийн Лавлах",
-          back: "Групп руу буцах"
+            title: "Холбоо Барих",
+            subtitle: "Манай төв оффистой холбогдоно уу. Бид таны асуултад хариулж, хамтран ажиллах боломжуудыг ярилцахад бэлэн байна."
         },
-        features: {
-          trade: { title: "Худалдааны Төв", desc: "Эрдэнэт хотын худалдааны гол цэг." },
-          service: { title: "Дээд Зэрэглэлийн Үйлчилгээ", desc: "Байгууламжийн менежмент болон харилцагчийн үйлчилгээ." },
-          location: { title: "Стратегийн Байршил", desc: "Хотын төв цэгт байршилтай." }
+        info: {
+            title: "Төв Оффисын Мэдээлэл",
+            phoneLabel: "Утасны Дугаар",
+            hours: "Даваа-Баасан, 09:00 - 18:00",
+            emailLabel: "Имэйл Хаяг",
+            inquiryLabel: "Албан Ёсны Лавлагаа",
+            officeLabel: "Төв Оффис",
+            city: "Улаанбаатар, Монгол Улс",
+            district: "Сүхбаатар Дүүрэг",
+            workingHoursTitle: "Цагийн Хуваарь",
+            weekdays: "Ажлын Өдрүүд",
+            weekends: "Амралтын Өдрүүд",
+            closed: "Амарна"
         },
-        contact: {
-            back: "Даниста Нүүр Хуудас",
-            title: "Түрээс & Менежмент",
-            subtitle: "Түрээсийн талаар мэдээлэл авах бол манай захиргаатай холбогдоно уу.",
-            phone: "Захиргаа",
-            email: "Түрээсийн Лавлах",
-            location: "Байршил",
-            hours: "Цагийн Хуваарь",
-            weekdays: "Даваа-Баасан: 09:00 - 20:00",
-            weekend: "Бямба-Ням: 10:00 - 18:00"
+        form: {
+            title: "Бидэнд Зурвас Илгээх",
+            firstName: "Нэр",
+            lastName: "Овог",
+            email: "Имэйл Хаяг",
+            subject: "Сэдэв",
+            message: "Зурвас",
+            placeholder: {
+                first: "Болд",
+                last: "Дорж",
+                email: "bold@example.com",
+                msg: "Бид танд юугаар туслах вэ?"
+            },
+            options: {
+                general: "Ерөнхий Лавлагаа",
+                partner: "Хамтын Ажиллагааны Санал",
+                investor: "Хөрөнгө Оруулалтын Харилцаа",
+                other: "Бусад"
+            },
+            sendButton: "Зурвас Илгээх"
         }
       },
 
       // ============================================================
-      // 5. VAJRA WISDOM (MONGOLIAN)
+      // 3. SUBSIDIARY COMPANIES (MONGOLIAN)
       // ============================================================
-      vajra: {
-        nav: { group: "Групп Нүүр", tourism: "Аялал Жуулчлал", projects: "Төслүүд", contact: "Холбоо Барих" },
-        hero: {
-          est: "Өвийг Хадгалах • Хамтдаа Хөгжих",
-          title: "Монголыг",
-          subtitle: "Нээгээрэй",
-          desc: "Важра Висдом Сан нь Улаанбаатар, Увс, Төв аймгуудын аялал жуулчлал, соёлын аяллыг хөгжүүлэхэд чиглэсэн тогтвортой санаачилгуудыг хэрэгжүүлдэг.",
-          explore: "Санаачилгууд",
-          back: "Групп руу буцах"
-        },
-        features: {
-          culture: { title: "Соёлын Аялал", desc: "Монголын нүүдэлчин ахуй соёлыг дэлхийд таниулах." },
-          region: { title: "Бүс Нутгийн Хөгжил", desc: "Увс, Төв аймаг, Улаанбаатар дахь идэвхтэй төслүүд." },
-          partner: { title: "Стратегийн Түншлэл", desc: "Тэргүүлэх аялал жуулчлалын агентлагуудтай хамтран ажилладаг." }
-        },
-        contact: {
-            back: "Важра Нүүр Хуудас",
-            title: "Бидэнтэй Хамтран Ажиллах",
-            subtitle: "Монголын аялал жуулчлалын ирээдүйг хамтдаа бүтээцгээе.",
-            phone: "Сангийн Оффис",
-            email: "Түншлэл",
-            location: "Төв Оффис",
-            hours: "Цагийн Хуваарь",
-            weekdays: "Даваа-Баасан: 09:00 - 18:00",
-            weekend: "Бямба-Ням: Амарна"
-        }
-      }
+      tsetsen: { nav: { group: "Групп Нүүр", products: "Бүтээгдэхүүн", factory: "Үйлдвэр", contact: "Холбоо Барих" }, hero: { est: "2005 онд байгуулагдсан • Улаанбаатар", title: "ДЭЭД", subtitle: "ЗЭРГИЙН ЧАНАР", desc: "Монгол улсын тогтвортой мах үйлдвэрлэл, экспортын итгэлт түнш.", order: "Захиалга Өгөх", back: "Групп руу буцах" }, stats: { factory: "Үйлдвэрийн Байр", freeze: "Гүн Хөлдөөгч", export: "Экспортод Бэлэн" }, content: { title: "Бидний Стандарт", desc: "Цэцэн Далт Трейд ХХК нь 2005 оноос хойш салбарын тулгуур багана байсаар ирсэн. Бид малчдын хотноос эцсийн бүтээгдэхүүн хүртэл чанарын хатуу хяналтыг хэрэгжүүлдэг.", list: { 0: "Эрүүл ахуйн дээд зэргийн хяналт", 1: "4 Гүн хөлдөөгч (200 тн)", 2: "Экспортын туршлага (БНХАУ 2018-2020)", 3: "Улаанбаатар хотод байршилтай" }, sales: "Борлуулалтын Алба" }, contact: { back: "Цэцэн Далт Нүүр Хуудас", title: "Үйлдвэртэй Холбогдох", subtitle: "Мах боловсруулах үйлдвэр болон экспортын албатай шууд холбогдох.", sales: "Борлуулалт & Экспорт", email: "Имэйл Хаяг", location: "Үйлдвэрийн Байршил", zone: "Аж үйлдвэрийн бүс", district: "Хан-Уул дүүрэг, Улаанбаатар", hours: { title: "Цагийн Хуваарь", mon: "Даваа - Баасан", sat: "Бямба", sun: "Ням", closed: "Амарна" } } },
+      lansyn: { nav: { group: "Групп Нүүр", farm: "Фермийн Тухай", contact: "Холбоо Барих" }, hero: { est: "2005 он • Монгол Сүүний Үйлдвэр", title: "Цэвэр.", subtitle: "Шинэхэн.", desc: "Багануур дүүргийн бэлчээрээс Улаанбаатарын хэрэглэгчдэд шууд хүргэж байна.", partner: "Хамтран Ажиллах", back: "Групп руу буцах" }, features: { title: "Тогтвортой Фермийн Аж Ахуй", subtitle: "Амьтны тав тух болон бүтээгдэхүүний цэвэр байдалд анхааран Улаанбаатар, Багануур дүүрэгт үйл ажиллагаа явуулдаг.", eco: { title: "Байгальд Ээлтэй", desc: "Бэлчээрийг хамгаалах." }, dairy: { title: "Дээд Зэргийн Сүү", desc: "Эрүүл ахуйн хатуу шаардлага." }, loc: { title: "Стратегийн Байршил", desc: "Багануур дүүрэгт байрлаж, ложистикийн оновчтой шийдлийг бүрдүүлсэн." } }, contact: { title: "Итгэж Болох Шинэхэн Чанар", pageTitle: "Лансын Цацалтай Холбогдох", pageSubtitle: "Манай ферм болон түгээлтийн төвтэй холбогдоорой.", call: "Залгах", email: "Имэйл Бичих", location: "Фермийн Байршил", back: "Нүүр хуудас руу буцах" } },
+      danista: { nav: { group: "Групп Нүүр", services: "Үйлчилгээ", lease: "Түрээс", contact: "Холбоо Барих" }, hero: { est: "2002 оноос хойш • Эрдэнэт хот", title: "Худалдаа,", subtitle: "Үйлчилгээний Төв", desc: "Даниста-Од ХХК нь Орхон аймгийн төвд байрлах худалдаа, үйлчилгээний тэргүүлэх төв юм. Бид бизнесийн таатай орчныг бүрдүүлж, түрээсийн цогц шийдлийг санал болгож байна.", lease: "Түрээсийн Лавлах", back: "Групп руу буцах" }, features: { trade: { title: "Худалдааны Төв", desc: "Эрдэнэт хотын худалдааны гол цэг." }, service: { title: "Дээд Зэрэглэлийн Үйлчилгээ", desc: "Байгууламжийн менежмент болон харилцагчийн үйлчилгээ." }, location: { title: "Стратегийн Байршил", desc: "Хотын төв цэгт байршилтай." } }, contact: { back: "Даниста Нүүр Хуудас", title: "Түрээс & Менежмент", subtitle: "Түрээсийн талаар мэдээлэл авах бол манай захиргаатай холбогдоно уу.", phone: "Захиргаа", email: "Түрээсийн Лавлах", location: "Байршил", hours: "Цагийн Хуваарь", weekdays: "Даваа-Баасан: 09:00 - 20:00", weekend: "Бямба-Ням: 10:00 - 18:00" } },
+      vajra: { nav: { group: "Групп Нүүр", tourism: "Аялал Жуулчлал", projects: "Төслүүд", contact: "Холбоо Барих" }, hero: { est: "Өвийг Хадгалах • Хамтдаа Хөгжих", title: "Монголыг", subtitle: "Нээгээрэй", desc: "Важра Висдом Сан нь Улаанбаатар, Увс, Төв аймгуудын аялал жуулчлал, соёлын аяллыг хөгжүүлэхэд чиглэсэн тогтвортой санаачилгуудыг хэрэгжүүлдэг.", explore: "Санаачилгууд", back: "Групп руу буцах" }, features: { culture: { title: "Соёлын Аялал", desc: "Монголын нүүдэлчин ахуй соёлыг дэлхийд таниулах." }, region: { title: "Бүс Нутгийн Хөгжил", desc: "Увс, Төв аймаг, Улаанбаатар дахь идэвхтэй төслүүд." }, partner: { title: "Стратегийн Түншлэл", desc: "Тэргүүлэх аялал жуулчлалын агентлагуудтай хамтран ажилладаг." } }, contact: { back: "Важра Нүүр Хуудас", title: "Бидэнтэй Хамтран Ажиллах", subtitle: "Монголын аялал жуулчлалын ирээдүйг хамтдаа бүтээцгээе.", phone: "Сангийн Оффис", email: "Түншлэл", location: "Төв Оффис", hours: "Цагийн Хуваарь", weekdays: "Даваа-Баасан: 09:00 - 18:00", weekend: "Бямба-Ням: Амарна" } },
     }
   }
 };
@@ -232,9 +158,7 @@ i18n
   .init({
     resources,
     fallbackLng: "en",
-    interpolation: {
-      escapeValue: false 
-    }
+    interpolation: { escapeValue: false }
   });
 
 export default i18n;

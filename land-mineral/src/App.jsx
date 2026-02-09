@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import BranchDetail from "./pages/BranchDetail";
+import Contact from "./pages/Contact"; // <--- Import the new Contact page
 
 // --- TSETSEN DALT (Meat) COMPONENTS ---
 import TsetsenDalt from "./pages/TsetsenDalt"; 
@@ -24,13 +25,6 @@ import DanistaOdContact from "./pages/DanistaOdContact";
 import VajraWisdom from "./pages/VajraWisdom";
 import VajraWisdomContact from "./pages/VajraWisdomContact";
 
-// Placeholder for Main Site Contact Page
-const Placeholder = ({ title }) => (
-  <div className="min-h-screen flex items-center justify-center bg-slate-950 text-slate-400 text-2xl font-light">
-    {title} - Coming Soon
-  </div>
-);
-
 function App() {
   return (
     <Router>
@@ -44,7 +38,7 @@ function App() {
                ========================================= */}
             <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
             <Route path="/about" element={<><Navbar /><About /><Footer /></>} />
-            <Route path="/contact" element={<><Navbar /><Placeholder title="Contact" /><Footer /></>} />
+            <Route path="/contact" element={<Contact />} /> {/* <--- Connected here */}
             <Route path="/branches/:branchId" element={<><Navbar /><BranchDetail /><Footer /></>} />
 
 
